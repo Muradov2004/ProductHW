@@ -1,0 +1,16 @@
+﻿@model Product
+@{
+    if (Model is not null)
+    {
+        <h1>@Model.Name</h1>
+
+        <p>Price: @Model.Price</p>
+
+        <p>Description: @Model.Description</p>
+    }
+    else
+    {
+        <h1>Product do not exist!!!</h1>
+    }
+}
+<a class="btn btn-primary" asp-controller="Product" asp-action="GetAll">Back</a>
