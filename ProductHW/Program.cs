@@ -1,6 +1,9 @@
+using FluentValidation.AspNetCore;
+
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllersWithViews();
+builder.Services.AddFluentValidation(f => f.RegisterValidatorsFromAssemblyContaining<Program>());
 
 var app = builder.Build();
 

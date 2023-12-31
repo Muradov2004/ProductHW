@@ -1,6 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using ProductHW.Models;
-using System.Reflection;
 
 namespace ProductHW.Controllers
 {
@@ -74,7 +73,7 @@ namespace ProductHW.Controllers
         {
             if (!ModelState.IsValid)
             {
-                return base.View(editedProduct);
+                return View(editedProduct);
             }
             var product = products.FirstOrDefault((Func<Product, bool>)(p => p.Id == editedProduct.Id));
 
